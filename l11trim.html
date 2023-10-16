@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>trim Method</title>
+	
+</head>
+<body>
+
+	
+
+
+	<script src="./libs/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			let something = "    Welcome to jQuery Lesson    ";
+			console.log(something);
+
+			something = $.trim(something);
+			console.log(something);
+
+			something = "\n\n    Welcome to jQuery Lesson    \n\n";
+			console.log(something);
+
+			something = jQuery.trim(something);
+			console.log(something);
+		});
+
+	</script>
+</body>
+</html>
