@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>even and odd method</title>
+    <style type="text/css">
+        
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           
+            padding: 0;
+            margin: 0;
+        }
+
+        .container{
+            width: 900px;
+            background-color: #f4f4f4;
+
+            padding: 20px;
+
+            display: flex;
+        }
+
+
+
+        .box{
+            width: 150px;
+            height: 300px;
+        }
+
+
+        .square1{
+            background-color: green;
+        }
+
+         .square2{
+            background-color: orange;
+        }
+
+        .square3{
+            background-color: blue;
+        }
+
+
+        .square4{
+            background-color: violet;
+        }
+
+        .square5{
+            background-color: brown;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <h1>parent and children</h1>
+        <a>This is jQuery version 3.7.1</a>
+    </div>
+
+   <div class="container">
+      <div class="box square1">Box 1</div>
+      <hr/>
+      <div class="box square2">Box 2</div>
+      <hr/>
+      <div class="box square3">Box 3</div>
+      <hr/>
+      <div class="box square4">Box 4</div>
+      <hr/>
+      <div class="box square5">Box 5</div>
+      <hr/>
+      
+          
+
+   </div>
+
+   <div>
+         <button type="button" id="even-btn">Even Button</button>
+         <button type="button" id="odd-btn">Odd Button</button>
+         <button type="button" id="slice-btn">Slice Button</button>
+  </div>
+
+
+    </body>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+	<script  type="text/javascript">
+
+		$(document).ready(function(){
+
+            //the index starts from 0
+            //even
+            $('#even-btn').click(function(){
+                $('.box').even().css('background-color','gray');
+            });
+
+            //the index starts from 0
+            //odd
+            $('#odd-btn').click(function(){
+                $('.box').odd().css('background-color','steelblue');
+            });
+
+            //the index strats from 0
+            //slice(strart idex,stop length)
+
+             // $('#slice-btn').click(function(){
+             //    $('.box').slice(1,4).css({
+             //        "background-color":"steelblue",
+             //        "color":"#fff"
+             //    });
+
+
+            $('#slice-btn').click(function(){
+                $('.box').slice(0,3).css({
+                    "background-color":"steelblue",
+                    "color":"#fff"
+                });
+            });
+        
+    });
+
+		
+	</script>
+</body>
+</html>
+
+
